@@ -9,7 +9,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class FileCoordinatesReader implements CoordinatesReader {
-    private String fileName;
+    private String fileName = "";
 
     public FileCoordinatesReader(String fileName) {
         this.fileName = fileName;

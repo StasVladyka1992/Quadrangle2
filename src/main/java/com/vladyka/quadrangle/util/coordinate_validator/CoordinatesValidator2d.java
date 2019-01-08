@@ -3,7 +3,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CoordinatesValidator2d implements CoordinatesValidator {
-    private String pattern = "(^(-?[0-9]{1,5}\\.[0-9]{1,5} ))((-?[0-9]{1,5}\\.[0-9]{1,5} )){6}((-?[0-9]{1,5}\\.[0-9]{1,5}+)$)";
+    private static final String PATTERN = "(^(-?[0-9]{1,5}\\.[0-9]{1,5} ))((-?[0-9]{1,5}\\.[0-9]{1,5} )){6}((-?[0-9]{1,5}\\.[0-9]{1,5}+)$)";
 
     @Override
     public boolean validateCoordinates(String uncheckedCoordinates) {
@@ -12,7 +12,7 @@ public class CoordinatesValidator2d implements CoordinatesValidator {
             return false;
         }
         else {
-            Pattern pat = Pattern.compile(pattern);
+            Pattern pat = Pattern.compile(PATTERN);
             Matcher matcher = pat.matcher(uncheckedCoordinates);
             if (matcher.find()) {
                 return true;

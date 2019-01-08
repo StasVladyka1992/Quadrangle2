@@ -16,7 +16,7 @@ import java.util.ArrayList;
  * Created by Vladyka Stas
  * on 28.12.2018 at 22:54
  **/
-public class QuadrangleFactory {
+public class QuadrangleSimpleFactory {
     public QuadrangleFigure getQuadrangle(ArrayList<Wector> wectorsList, ShapeValidator shapeValidator) throws
             NotSupportedFunctionException, NullReferenceException {
 

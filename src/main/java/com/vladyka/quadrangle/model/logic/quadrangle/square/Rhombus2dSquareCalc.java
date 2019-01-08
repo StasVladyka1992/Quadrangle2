@@ -19,7 +19,6 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class Rhombus2dSquareCalc implements SquareCalc {
-    private static final Logger logger = LogManager.getLogger(Rhombus2dSquareCalc.class);
 
     @Override
     public double getSquare(QuadrangleFigure quadrangleFigure, ShapeValidator shapeValidator,
@@ -44,7 +43,6 @@ public class Rhombus2dSquareCalc implements SquareCalc {
         } else {
             throw new NotSupportedFunctionException("Figure isn't 2d rhombus");
         }
-        logger.info("Calculation rhombus square is done");
         square = roundSquare(square, 3);
         return square;
     }

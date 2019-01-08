@@ -4,14 +4,12 @@ package com.vladyka.quadrangle.model.logic.quadrangle.perimeter;
 import com.vladyka.quadrangle.model.entity.wector.Wector;
 import com.vladyka.quadrangle.model.exception.NullReferenceException;
 import com.vladyka.quadrangle.model.logic.wector.length.WectorLengthCalc;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class QuadranglePerimeterCalc implements PerimeterCalc {
-    private static final Logger logger = LogManager.getLogger(QuadranglePerimeterCalc.class);
 
     @Override
     public double calcPerimeter(ArrayList<Wector> wectorsList, WectorLengthCalc wectorLengthCalc) throws NullReferenceException{
@@ -23,7 +21,6 @@ public class QuadranglePerimeterCalc implements PerimeterCalc {
         for (int i = 0; i <sideLengths.length ; i++) {
             perimeter+=sideLengths[i];
         }
-        logger.debug("<calcPerimeter> is done");
 
         perimeter = roundPerimeter(perimeter, 3);
 

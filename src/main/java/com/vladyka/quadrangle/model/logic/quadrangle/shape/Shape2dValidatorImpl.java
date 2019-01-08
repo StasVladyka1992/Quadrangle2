@@ -113,7 +113,6 @@ public class Shape2dValidatorImpl implements ShapeValidator {
         }
         isRhombus = isParallelogram(quadrangleFigure) &&
                 sidesLength[0] == sidesLength[1] && sidesLength[1] == sidesLength[2];
-        logger.info("<isRhombus> is done");
         return isRhombus;
     }
 
@@ -145,7 +144,6 @@ public class Shape2dValidatorImpl implements ShapeValidator {
             System.out.println(e.getMessage());
             return isTrapezium;
         }
-        logger.info("<isTrapezium> is done");
         return isTrapezium;
     }
 
@@ -174,7 +172,6 @@ public class Shape2dValidatorImpl implements ShapeValidator {
             System.out.println(e.getMessage());
             return isSquare;
         }
-        logger.info("<isSquare> is done");
         return isSquare;
     }
 }

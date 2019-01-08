@@ -16,7 +16,6 @@ import java.util.ArrayList;
 
 
 public class Square2dSquareCalc implements SquareCalc {
-    private static final Logger logger = LogManager.getLogger(Square2dSquareCalc.class);
 
     @Override
 
@@ -39,7 +38,6 @@ public class Square2dSquareCalc implements SquareCalc {
             throw new NotSupportedFunctionException("Figure isn't 2d square");
         }
 
-        logger.info("Calculation square square is done");
         square = roundSquare(square, 3);
 
         return square;
